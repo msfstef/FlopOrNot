@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {getEndpoint} from '../config/keys';
 import {params} from '../config/params';
-import Poster from './Poster'
+
+import GameContainer from './GameContainer';
+
 
 
 class MovieGetter extends Component {
@@ -44,7 +46,7 @@ class MovieGetter extends Component {
     }
 
     getMovie = (id) => {
-        return fetch(getEndpoint('/movie/'+ id))
+        return fetch(getEndpoint('/movie/'+ id) + "&append_to_response=credits")
             .then( (response) => {
                 return response.json()
             })
@@ -75,6 +77,7 @@ class MovieGetter extends Component {
             title: movie.title,
             plot: movie.overview,
             poster_src: "https://image.tmdb.org/t/p/w500" + movie.poster_path,
+            cast: movie.credits.cast.slice(0,5),
             budget: movie.budget,
             revenue: movie.revenue,
             imdb_id: movie.imdb_id,
@@ -91,7 +94,7 @@ class MovieGetter extends Component {
         
         return (
             <div>
-                <Poster poster_src={this.state.movie.poster_src}/>
+                <GameContainer {...this.state} />
             </div>
         );
     }
