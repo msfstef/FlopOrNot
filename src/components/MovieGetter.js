@@ -94,7 +94,7 @@ class MovieGetter extends Component {
         
         return (
             <div>
-                <GameContainer {...this.state} />
+                <GameContainer {...this.state} newMovie={this.getData} />
             </div>
         );
     }

@@ -6,6 +6,7 @@ class Cast extends Component {
         var cast = [];
         for (let i=0; i<cast_raw.length; i++) {
             let actor = cast_raw[i]
+            if (!actor.profile_path) {continue}
             cast.push({
                 character: actor.character,
                 name: actor.name,
