@@ -27,13 +27,17 @@ class GameBar extends Component {
 
     render() {
         return (
-            <div id="GameBar">
+            <div id="GameBar" className={this.props.win?"win":"loss"}>
                 <div id="Score">
                     <div>Score</div>
                     <div>{this.props.score}</div>
                 </div>
 
-                <div id="RoundInfo" className={this.props.win?"win":"loss"}>
+                <div id="PlayerResult">
+                {this.props.win?"CORRECT":"WRONG"}
+                </div>
+
+                <div id="RoundInfo">
                     {this.formatInfo()}
                     <div>Budget: {this.props.budget}</div>
                     <div>Revenue: {this.props.revenue}</div>

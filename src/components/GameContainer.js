@@ -56,7 +56,6 @@ class GameContainer extends Component {
     render() {
         return (
             <div id="GameContainer">
-                <p>{this.state.score}</p>
                 <div className="button left" 
                     onClick={()=>this.userPick(true)}>
                     Flop
@@ -81,7 +80,7 @@ class GameContainer extends Component {
                 <GameBar
                     title={this.state.prevMovie.title}
                     imdb={this.state.prevMovie.imdb_id}
-                    isFlop={this.state.isFlop}
+                    isFlop={this.state.wasFlop}
                     win={this.state.win}
                     score={this.state.score}
                     revenue={this.state.prevMovie.revenue}
