@@ -1,0 +1,10 @@
+#castItemsContainer {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.castItem {
+    display: inline-block;
+}

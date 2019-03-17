@@ -1,0 +1,19 @@
+#GameBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+
+    background-color: white;
+    width: 100%;
+}
+
+
+.win {
+    background-color: rgb(210, 255, 210);
+}
+
+.loss {
+    background-color: rgb(255, 189, 189);
+}

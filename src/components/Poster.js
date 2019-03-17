@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import './Poster.css'
+
 
 class Poster extends Component {
     render() {
         return (
-            <div>
+            <div id="Poster">
                 <img
                     src={this.props.poster_src}
                     alt="movie_poster" />

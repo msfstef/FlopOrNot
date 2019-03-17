@@ -1,0 +1,8 @@
+#Poster {
+    width: 100%;
+    text-align: center;
+}
+
+#Poster img {
+    max-width: 100%;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Cast.css'
 
 class Cast extends Component {
     genCast = () => {
@@ -21,15 +22,17 @@ class Cast extends Component {
     render() {
         var cast = this.genCast();
         return (
-            <div>
+            <div id="castItemsContainer">
                 {cast.map((actor) => {
                     return (
-                        <div key={actor.name}>
+                        <div className="castItem" key={actor.name}>
                             <img 
                                 src={actor.pic_src}
                                 alt="actor pic" />
-                            <span>{actor.name}</span>
-                            <span>{actor.character}</span>
+                            <div className="castText">
+                                <div>{actor.name}</div>
+                                <div>{actor.character}</div>
+                            </div>
                         </div>
                     )
                 })}
