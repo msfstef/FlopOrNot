@@ -26,14 +26,14 @@ class Poster extends Component {
         return (
             <div id="Poster">
                 {(this.props.loading || !this.state.imageLoaded)?
-                <div>
-                <img
-                    id="noPoster"
-                    src={require('../assets/noposter.png')}
-                    alt="loading_poster" />
-                <div id="spinner">
-                    <Loading />
-                </div>
+                <div id="noPosterContainer">
+                    <img
+                        id="noPoster"
+                        src={require('../assets/noposter.png')}
+                        alt="loading_poster" />
+                    <div id="spinner">
+                        <Loading />
+                    </div>
                 </div>
                 :
                 <img id="posterImage"

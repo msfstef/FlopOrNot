@@ -2,7 +2,8 @@
     display: flex;
     z-index: 1000;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     position: fixed;
     bottom: 0;
 
@@ -12,11 +13,11 @@
 
 
 .win {
-    background-color: rgb(210, 255, 210);
+    background-color: rgba(144, 255, 144, 0.9);
 }
 
 .loss {
-    background-color: rgb(255, 189, 189);
+    background-color: rgba(255, 144, 144, 0.9);
 }
 
 
@@ -27,7 +28,17 @@
 }
 
 #Score {
-    width: 23%;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 70px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 4px;
+    padding: 1px;
+}
+
+#Score .title {
+    background-color: white;
 }
 
 #PlayerResult {
@@ -35,5 +46,8 @@
 }
 
 #RoundInfo {
-    width: 23%
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100px;
+    border-radius: 4px;
+    padding: 1px;
 }

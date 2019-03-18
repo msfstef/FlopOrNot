@@ -51,7 +51,7 @@ class MovieGetter extends Component {
                 return response.json()
             })
             .then ( (json) => {
-                if (json.revenue > 0 && json.budget > 0) {
+                if (json.revenue > 1000 && json.budget > 1000) {
                     return json
                 } else {
                     return false

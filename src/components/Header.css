@@ -4,5 +4,74 @@
     top: 0;
     height: 50px;
     width: 100%;
-    background-color: rgb(179, 179, 179);
+
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to left, rgb(150, 141, 156), rgb(211, 198, 214));
+}
+
+#Header .logo {
+    cursor: pointer;
+    height: 70%;
+    max-width: 35vw;
+    transition: box-shadow 0.05s;
+}
+
+.itemContainer {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+}
+
+.item {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    width: min-content;
+    margin-left: 20px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.63);
+    border-radius: 10px;
+    transition: transform 0.1s, text-shadow 0.1s;
+}
+
+.item {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 3.5vmin;
+}
+
+.item:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+
+}
+
+.item.contact {
+    display:none;
+}
+
+@media screen and (min-width: 900px) {
+    .item.contact {
+        display:unset;
+    }
+
+    .item {
+        font-size: 1.1em;
+    }
 }
