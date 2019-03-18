@@ -15,7 +15,7 @@ class GameContainer extends Component {
             score: 0,
             winPoints: 10,
             currentWinPoints: 10,
-            lossPoints: 10,
+            lossPoints: 20,
             castPoints: 3,
             plotPoints: 2,
 
@@ -61,17 +61,39 @@ class GameContainer extends Component {
         }
     }
 
+    showCast = () => {
+        this.setState({
+            cast:true,
+            currentWinPoints: 
+                this.state.currentWinPoints - 
+                this.state.castPoints
+        })
+    }
+
+    showPlot = () => {
+        this.setState({
+            plot:true,
+            currentWinPoints: 
+                this.state.currentWinPoints - 
+                this.state.plotPoints
+        })
+    }
+
 
     render() {
         return (
             <div id="GameContainer">
-                <div className="button left" 
+                <div
+                    style={{pointerEvents: this.props.loading?"none":"auto"}} 
+                    className="button left" 
                     onClick={()=>this.userPick(true)}>
-                    Flop
+                    <span>Flop</span>
                 </div>
-                <div className="button right" 
+                <div
+                    style={{pointerEvents: this.props.loading?"none":"auto"}} 
+                    className="button right"
                     onClick={()=>this.userPick(false)}>
-                    Not
+                    <span>Not</span>
                 </div>
                 
                 <div id="posterContainer">
@@ -80,10 +102,10 @@ class GameContainer extends Component {
                 </div>
                 
                 <div id="castButton"
-                    onClick={()=>{this.setState({cast:true})}}
+                    onClick={()=> this.showCast()}
                     className={"hintButton" + 
                         ((this.state.cast || this.props.loading)?" hide":" show")}>
-                SHOW CAST
+                    <span>SHOW CAST</span>
                 </div>
 
                 <div id="castContainer" 
@@ -92,10 +114,10 @@ class GameContainer extends Component {
                 </div>
 
                 <div id="plotButton"
-                    onClick={()=>{this.setState({plot:true})}}
+                    onClick={()=> this.showPlot()}
                     className={"hintButton" + 
                         ((!this.state.plot && this.state.cast)?" show":" hide")}>
-                SHOW CAST
+                    <span>SHOW PLOT</span>
                 </div>
 
                 <div id="plotContainer" 
