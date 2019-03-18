@@ -7,4 +7,25 @@
 
 .castItem {
     display: inline-block;
+    width: 12vmax;
+    margin-left: 1vmax;
+    margin-right: 1vmax;
+}
+
+.castItem img {
+    max-width: 100%;
+}
+
+
+.castText {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.1vmax;
+    border: 1px black solid;
+}
+
+.castText div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
