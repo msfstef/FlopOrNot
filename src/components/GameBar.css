@@ -1,5 +1,6 @@
 #GameBar {
     display: flex;
+    z-index: 1000;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;

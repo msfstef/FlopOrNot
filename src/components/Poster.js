@@ -25,7 +25,7 @@ class Poster extends Component {
     render() {
         return (
             <div id="Poster">
-                {(this.props.loading || this.state.imageLoaded)?
+                {(this.props.loading || !this.state.imageLoaded)?
                 <div>
                 <img
                     id="noPoster"

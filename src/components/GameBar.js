@@ -27,7 +27,7 @@ class GameBar extends Component {
 
 
     formatDollars = (value) => {
-        if (value/1000000 > 1) {
+        if (Math.floor(value/1000000) > 1) {
             let valRound = Math.floor(value/1000000)
             return "$" + valRound + "M"
         } else {

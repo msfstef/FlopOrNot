@@ -35,13 +35,12 @@ class MovieGetter extends Component {
 
     getRandId = () => {
         let page = Math.floor(Math.random() * this.state.noOfPages) + 1
-        let result = Math.floor(Math.random() * 20)
         return fetch(getEndpoint('/discover/movie') + params.join('') + '&page=' + page)
             .then( (response) => {
-                console.log(response)
                 return response.json()
             })
             .then ( (json) => {
+                let result = Math.floor(Math.random() * json.results.length)
                 return json.results[result].id
             })
     }

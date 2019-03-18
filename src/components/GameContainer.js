@@ -24,6 +24,29 @@ class GameContainer extends Component {
         }
     }
 
+    componentDidMount () {
+        this.anchorLinkHandler()
+    }
+
+    anchorLinkHandler = (id) => {
+        const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+    
+        const targetAnchor = document.getElementById(id);
+        if (!targetAnchor) return;
+        const originalTop = distanceToTop(targetAnchor);
+    
+        window.scrollBy({ top: originalTop, left: 0, behavior: "smooth" });
+    
+        const checkIfDone = setInterval(function() {
+            const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+            if (distanceToTop(targetAnchor) === 0 || atBottom) {
+                targetAnchor.tabIndex = "-1";
+                targetAnchor.focus();
+                clearInterval(checkIfDone);
+            }
+        }, 100);
+    }
+
 
     handleWin = () => {
         this.setState({
@@ -54,6 +77,9 @@ class GameContainer extends Component {
             wasFlop:isFlop,
             prevMovie: this.props.movie
         })
+
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
         if (flop === isFlop) {
             this.handleWin()
         } else {
@@ -68,6 +94,10 @@ class GameContainer extends Component {
                 this.state.currentWinPoints - 
                 this.state.castPoints
         })
+        
+        setTimeout(()=> {
+            window.scrollTo({ top: 10000, left: 0, behavior: "smooth" })
+        }, 200)
     }
 
     showPlot = () => {
@@ -77,6 +107,10 @@ class GameContainer extends Component {
                 this.state.currentWinPoints - 
                 this.state.plotPoints
         })
+
+        setTimeout(()=> {
+            window.scrollTo({ top: 10000, left: 0, behavior: "smooth" })
+        }, 200)
     }
 
 
@@ -104,8 +138,9 @@ class GameContainer extends Component {
                 <div id="castButton"
                     onClick={()=> this.showCast()}
                     className={"hintButton" + 
-                        ((this.state.cast || this.props.loading)?" hide":" show")}>
-                    <span>SHOW CAST</span>
+                        ((this.state.cast || this.props.loading)?" hide ":" show ")
+                        +(this.props.loading?" hideLoad":"")}>
+                    <span>SHOW CAST (-{this.state.castPoints} points)</span>
                 </div>
 
                 <div id="castContainer" 
@@ -116,8 +151,9 @@ class GameContainer extends Component {
                 <div id="plotButton"
                     onClick={()=> this.showPlot()}
                     className={"hintButton" + 
-                        ((!this.state.plot && this.state.cast)?" show":" hide")}>
-                    <span>SHOW PLOT</span>
+                        ((!this.state.plot && this.state.cast)?" show":" hide")
+                        +(this.props.loading?" hideLoad":"")}>
+                    <span>SHOW PLOT (-{this.state.plotPoints} points)</span>
                 </div>
 
                 <div id="plotContainer" 
