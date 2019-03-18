@@ -38,6 +38,7 @@ class MovieGetter extends Component {
         let result = Math.floor(Math.random() * 20)
         return fetch(getEndpoint('/discover/movie') + params.join('') + '&page=' + page)
             .then( (response) => {
+                console.log(response)
                 return response.json()
             })
             .then ( (json) => {
@@ -63,7 +64,6 @@ class MovieGetter extends Component {
         let id = await this.getRandId()
         let movie = await this.getMovie(id)
         if (movie) {
-            console.log(movie)
             return movie
         } else {
             return this.getValidMovie()

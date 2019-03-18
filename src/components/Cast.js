@@ -2,6 +2,42 @@ import React, { Component } from 'react';
 import './Cast.css'
 
 class Cast extends Component {
+    componentDidMount() {
+        const slider = document.getElementById('castItemsContainer');
+        var isDown = false;
+        var startX;
+        var scrollLeft;        
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            scrollLeft = slider.scrollLeft;
+            if (isDown) {
+                startX = e.pageX - slider.offsetLeft;
+                slider.classList.add('active');
+                
+            }
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; //scroll-fast
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+
     genCast = () => {
         let cast_raw = this.props.cast || [];
         var cast = [];

@@ -1,0 +1,10 @@
+#plotTextContainer {
+    box-sizing: border-box;
+
+    border-radius: 10px;
+    border: 15px transparent solid;
+    background-color: rgba(214, 214, 214, 0.5);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+
+    z-index: 3;
+}

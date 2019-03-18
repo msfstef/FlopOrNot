@@ -14,6 +14,7 @@
 
 #posterContainer {
     width: 90%;
+    margin-bottom: 10px;
 }
 
 #castContainer {
@@ -21,20 +22,29 @@
     max-width: 90%;
 }
 
+#plotContainer {
+    width: 700px;
+    max-width: 90%;
+}
+
 .hintContainer {
-    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
     
 }
 
 .hintContainer.hide {
     height: 0;
-    transform: scale(0);
+    margin: 0;
+    transform-origin: top center;
+    transform: scaleX(0) scaleY(0);
     
 }
 .hintContainer.show {
     height: auto;
-    transform: scale(1);
-    transition: transform 2s;
+    transform-origin: top center;
+    transform: scale(1) skew(100,0);
+    transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .hintButton {
@@ -52,10 +62,10 @@
 }
 
 .hintButton.hide {
+    height: 0;
     transform: scale(0);
-
-    
 }
+
 .hintButton.show {
     transform: scale(1);
     

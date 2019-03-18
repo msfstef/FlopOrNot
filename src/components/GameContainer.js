@@ -49,7 +49,7 @@ class GameContainer extends Component {
     }
 
     userPick = (flop) => {
-        var isFlop = (this.props.movie.budget > this.props.movie.revenue)
+        var isFlop = (this.props.movie.budget > 0.95*this.props.movie.revenue)
         this.setState({
             wasFlop:isFlop,
             prevMovie: this.props.movie
