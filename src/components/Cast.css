@@ -12,6 +12,13 @@
     margin-right: 1vmax;
 }
 
+.castItem.last {
+    margin-right:0
+}
+.castItem.first {
+    margin-left:0
+}
+
 .castItem img {
     max-width: 100%;
 }

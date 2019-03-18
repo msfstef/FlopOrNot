@@ -23,9 +23,12 @@ class Cast extends Component {
         var cast = this.genCast();
         return (
             <div id="castItemsContainer">
-                {cast.map((actor) => {
+                {cast.map((actor, index) => {
                     return (
-                        <div className="castItem" key={actor.name}>
+                        <div className={"castItem"
+                            + (index===0?" first ":" ")
+                            + (index===cast.length-1?"last":"")}
+                            key={actor.name}>
                             <img 
                                 src={actor.pic_src}
                                 alt="actor pic" />

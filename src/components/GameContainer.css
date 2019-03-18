@@ -21,8 +21,34 @@
     max-width: 80%;
 }
 
-#hintContainer {
-    width: 80%;
+.hintContainer {
+    width: 90%;
+    
+}
+
+.hintContainer.hide {
+    height: 0;
+    transform: scale(0);
+    
+}
+.hintContainer.show {
+    height: auto;
+    transform: scale(1);
+    transition: transform 2s;
+}
+
+.hintButton {
+
+}
+
+.hintButton.hide {
+    transform: scale(0);
+
+    
+}
+.hintButton.show {
+    transform: scale(1);
+    
 }
 
 
@@ -36,6 +62,8 @@
     background-color: white;
     justify-content: center;
     align-items: center;
+
+    z-index: 10;
 }
 
 .button.right {

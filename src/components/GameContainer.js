@@ -18,6 +18,9 @@ class GameContainer extends Component {
             lossPoints: 10,
             castPoints: 3,
             plotPoints: 2,
+
+            cast: false,
+            plot: false,
         }
     }
 
@@ -26,7 +29,10 @@ class GameContainer extends Component {
         this.setState({
             win: true,
             score: this.state.score + this.state.currentWinPoints,
-            currentWinPoints: this.state.winPoints
+            currentWinPoints: this.state.winPoints,
+
+            cast: false,
+            plot: false,
         })
         this.props.newMovie()
     }
@@ -35,6 +41,9 @@ class GameContainer extends Component {
         this.setState({
             win: false,
             score: this.state.score - this.state.lossPoints,
+
+            cast: false,
+            plot: false,
         })
         this.props.newMovie()
     }
@@ -66,14 +75,31 @@ class GameContainer extends Component {
                 </div>
                 
                 <div id="posterContainer">
-                    <Poster poster_src={this.props.movie.poster_src} />
+                    <Poster poster_src={this.props.movie.poster_src} 
+                            loading={this.props.loading}/>
+                </div>
+                
+                <div id="castButton"
+                    onClick={()=>{this.setState({cast:true})}}
+                    className={"hintButton" + 
+                        ((this.state.cast || this.props.loading)?" hide":" show")}>
+                SHOW CAST
                 </div>
 
-                <div id="castContainer" className="hintContainer">
+                <div id="castContainer" 
+                    className={"hintContainer" + (this.state.cast?" show":" hide")}>
                     <Cast cast={this.props.movie.cast} />
                 </div>
 
-                <div id="hintContainer" className="hintContainer">
+                <div id="plotButton"
+                    onClick={()=>{this.setState({plot:true})}}
+                    className={"hintButton" + 
+                        ((!this.state.plot && this.state.cast)?" show":" hide")}>
+                SHOW CAST
+                </div>
+
+                <div id="plotContainer" 
+                    className={"hintContainer" + (this.state.plot?" show":" hide")}>
                     <Plot plot={this.props.movie.plot} />
                 </div>
 
