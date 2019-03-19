@@ -116,8 +116,8 @@ class GameBar extends Component {
                         </div>
                     </a>
                     
-                    <div>Bgt: {this.formatDollars(this.props.budget)}</div>
-                    <div>Rev: {this.formatDollars(this.props.revenue)}</div>
+                    <div>Budget: {this.formatDollars(this.props.budget)}</div>
+                    <div>Revenue: {this.formatDollars(this.props.revenue)}</div>
                 </div>
             </div>
         );
