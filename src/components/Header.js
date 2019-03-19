@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import About from './About';
-import flopornotlogo from '../assets/flopornotlogo.svg'
 import './Header.css'
 
 class Header extends Component {
@@ -24,7 +23,7 @@ class Header extends Component {
             <div id="Header">
                 <div className="inHeader">
                     <img className="logo" 
-                        src={flopornotlogo}
+                        src={require('../assets/flopornotlogo.png')}
                         alt="logo" />
                     <div>FLOP OR NOT</div>
                 </div>
@@ -34,7 +33,7 @@ class Header extends Component {
                 <div className="about item" onClick={()=>this.toggleShow()}>
                     About
                     <div id="controlsReminderTriangle"></div>
-                    <div id="controlsReminder">Check out the controls.</div>
+                    <div id="controlsReminder">Check out the controls!</div>
                 </div>
                 <a className="contact item"
                     target="_blank" rel="noopener noreferrer"
