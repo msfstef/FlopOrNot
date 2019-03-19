@@ -6,18 +6,38 @@ class GameBar extends Component {
     constructor(props){
         super(props)
         this.state = {
-            pointDiff: 0,
-            active: false,
-            bubbles: []
+            scoreDiv: {},
+            resultDiv: {},
         }
+    }
+
+    componentDidMount () {
+        var scoreDiv = document.getElementById("Score")
+        var resultDiv = document.getElementById("PlayerResult")
+        this.setState({scoreDiv, resultDiv})
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.score !== this.props.score) {
-            let pointDiff = (prevProps.score - this.props.score)
-            this.setState({
-                bubbles: [...this.state.bubbles, pointDiff]
-            })
+            let pointDiff = -(prevProps.score - this.props.score)
+
+            var bubble = document.createElement("div")
+            bubble.className = "bubble " + (pointDiff>0?"win":"loss")
+            var diffText = document.createTextNode(pointDiff)
+            bubble.appendChild(diffText)
+
+            var result = document.createElement("div")
+            result.className = "resultBubble " + (pointDiff>0?"win":"loss")
+            var resultText = document.createTextNode((pointDiff>0?"CORRECT":"WRONG"))
+            result.appendChild(resultText)
+
+            this.state.scoreDiv.appendChild(bubble)
+            this.state.resultDiv.appendChild(result)
+
+            setTimeout(()=>{
+                this.state.scoreDiv.removeChild(bubble)
+                this.state.resultDiv.removeChild(result)
+            }, 1000)
         }
     }
 
@@ -58,15 +78,11 @@ class GameBar extends Component {
         return (
             <div id="GameBar" className={this.props.win?"win":"loss"}>
                 <div id="Score" className="barItem">
-                    <div class={"pointBubble" + (this.state.activeBubble?" active":"")}>
-                        {this.state.pointDiff}
-                    </div>
                     <div className="title">Score</div>
                     <div className="text">{this.props.score}</div>
                 </div>
 
                 <div id="PlayerResult" className="barItem">
-                    <div>{this.props.win?"CORRECT":"WRONG"}</div>
                     {this.formatInfo()}
                 </div>
 

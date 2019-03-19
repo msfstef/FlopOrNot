@@ -31,8 +31,8 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.8);
     width: 70px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 4px;
     padding: 1px;
 }
@@ -41,13 +41,105 @@
     background-color: white;
 }
 
-#PlayerResult {
-    width: 54%
+@keyframes bubble {
+    0%   {transform: translateY(0px)}
+    25%  {
+            transform: translateY(-20px);
+            opacity: 1;    
+        }
+    100% {
+        transform: translateY(-150px);
+        opacity: 0;
+        }
 }
+  
+
+#Score .bubble {
+    pointer-events: none;
+    position: absolute;
+    top: -100%;
+    left: calc(50% - 20px);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 3px;
+
+    animation-name: bubble;
+    animation-duration: 1s;
+}
+
+#Score .bubble.win {
+    background-color: rgba(79, 255, 79, 0.7);
+}
+
+#Score .bubble.loss {
+    background-color: rgba(255, 100, 100, 0.7);
+}
+
+
+#PlayerResult {
+    min-width: 50%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.5em;        /* fallback */
+    max-height: calc(2 * 1.5em);       /* fallback */
+}
+
+@keyframes result {
+    0%   {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+        }
+    25%  {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        }
+    60% {opacity: 1;}
+    100% {opacity: 0}
+}
+
+
+#PlayerResult .resultBubble {
+    pointer-events: none;
+    position: absolute;
+    top: -100%;
+    left: calc(50% - 45px);
+
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 90px;
+    padding-bottom: 3px;
+    
+    z-index: -20;
+    animation-name: result;
+    animation-duration: 1s;
+}
+
+#PlayerResult .resultBubble.win {
+    background-color: rgba(79, 255, 79, 0.7);
+}
+
+#PlayerResult .resultBubble.loss {
+    background-color: rgba(255, 100, 100, 0.7);
+}
+
+
 
 #RoundInfo {
     background-color: rgba(255, 255, 255, 0.8);
     width: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-radius: 4px;
     padding: 1px;
 }
