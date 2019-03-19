@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
+import About from './About';
 import './Header.css'
 
 class Header extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            show: false
+        }
+    }
+
+    toggleShow = ()=>{
+        this.setState({show:!this.state.show})
+    }
+
     render() {
         return (
             <div id="Header">
@@ -11,11 +23,10 @@ class Header extends Component {
                     alt="logo" /> */}
                 
                 <div className="itemContainer">
-                <a className="about item"
-                    target="_blank" rel="noopener noreferrer"
-                    href="https://msfstef.github.io/#/about">
+                <About show={this.state.show} toggleShow={this.toggleShow} />
+                <div className="about item" onClick={()=>this.toggleShow()}>
                     About
-                </a>
+                </div>
                 <a className="contact item"
                     target="_blank" rel="noopener noreferrer"
                     href="https://msfstef.github.io/#/contact">
