@@ -8,10 +8,6 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/media/msfsteflogo.528aa37d.svg"
   },
   {
-    "revision": "a4b1e6911a9cd565289174ade8a72d6d",
-    "url": "/FlopOrNot/static/media/flopornotlogo.a4b1e691.svg"
-  },
-  {
     "revision": "b39afe4a04caa099a5b91141d4362deb",
     "url": "/FlopOrNot/static/media/ConcertOne-Regular.b39afe4a.ttf"
   },
@@ -20,19 +16,19 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/js/runtime~main.b718d01a.js"
   },
   {
-    "revision": "d9084428c19e61dee984",
-    "url": "/FlopOrNot/static/js/main.c58081e9.chunk.js"
+    "revision": "b88fba25a8524c4b9458",
+    "url": "/FlopOrNot/static/js/main.65754da1.chunk.js"
   },
   {
-    "revision": "89fc808741cf0c917eb6",
-    "url": "/FlopOrNot/static/js/2.a1473b43.chunk.js"
+    "revision": "665ab89ba5e3126eddd3",
+    "url": "/FlopOrNot/static/js/2.9066be63.chunk.js"
   },
   {
-    "revision": "d9084428c19e61dee984",
-    "url": "/FlopOrNot/static/css/main.1d78921d.chunk.css"
+    "revision": "b88fba25a8524c4b9458",
+    "url": "/FlopOrNot/static/css/main.f92769d4.chunk.css"
   },
   {
-    "revision": "917e527f4617e15fb1b162f8717f29d6",
+    "revision": "81f6536f93596b9a7fe749f5beeafc23",
     "url": "/FlopOrNot/index.html"
   }
 ];
