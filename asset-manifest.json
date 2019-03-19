@@ -1,13 +1,13 @@
 {
-  "main.css": "/FlopOrNot/static/css/main.1a5ce8bd.chunk.css",
-  "main.js": "/FlopOrNot/static/js/main.802c98a7.chunk.js",
-  "main.js.map": "/FlopOrNot/static/js/main.802c98a7.chunk.js.map",
+  "main.css": "/FlopOrNot/static/css/main.e48a81bf.chunk.css",
+  "main.js": "/FlopOrNot/static/js/main.44cdd1dc.chunk.js",
+  "main.js.map": "/FlopOrNot/static/js/main.44cdd1dc.chunk.js.map",
   "runtime~main.js": "/FlopOrNot/static/js/runtime~main.b718d01a.js",
   "runtime~main.js.map": "/FlopOrNot/static/js/runtime~main.b718d01a.js.map",
   "static/js/2.4df34fc1.chunk.js": "/FlopOrNot/static/js/2.4df34fc1.chunk.js",
   "static/js/2.4df34fc1.chunk.js.map": "/FlopOrNot/static/js/2.4df34fc1.chunk.js.map",
   "index.html": "/FlopOrNot/index.html",
-  "precache-manifest.44a69602ab57560ead3ef288c3d42e93.js": "/FlopOrNot/precache-manifest.44a69602ab57560ead3ef288c3d42e93.js",
+  "precache-manifest.3c52fafbd9e9c0e16bdad7497fec5e1f.js": "/FlopOrNot/precache-manifest.3c52fafbd9e9c0e16bdad7497fec5e1f.js",
   "service-worker.js": "/FlopOrNot/service-worker.js",
-  "static/css/main.1a5ce8bd.chunk.css.map": "/FlopOrNot/static/css/main.1a5ce8bd.chunk.css.map"
+  "static/css/main.e48a81bf.chunk.css.map": "/FlopOrNot/static/css/main.e48a81bf.chunk.css.map"
 }
