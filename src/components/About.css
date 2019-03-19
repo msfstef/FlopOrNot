@@ -8,8 +8,31 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.aboutContainer {
+    transition: opacity 0.3s ease-out;
+}
+
 .aboutContainer.hide {
-    display: none;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.aboutContainer.show {
+    opacity: 1;
+}
+
+.aboutContainer #AboutContent {
+    transition: opacity 0.1s ease-out;
+}
+
+
+.aboutContainer.hide #AboutContent {
+    opacity:0;
+}
+
+.aboutContainer.show  #AboutContent{
+    opacity: 1;
 }
 
 #AboutContent {

@@ -108,6 +108,14 @@ class GameBar extends Component {
                 </div>
 
                 <div id="RoundInfoFloating">
+                    
+                    <a target="_blank" rel="noopener noreferrer" 
+                        href={"https://www.imdb.com/title/" + this.props.imdb}>
+                        <div>
+                            {this.props.title}
+                        </div>
+                    </a>
+                    
                     <div>Bgt: {this.formatDollars(this.props.budget)}</div>
                     <div>Rev: {this.formatDollars(this.props.revenue)}</div>
                 </div>

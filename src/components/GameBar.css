@@ -224,11 +224,19 @@
     font-size: 120%;
 }
 
-
 #RoundInfoFloating div {
     font-size: 200%;
+    width: 150px;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
+#RoundInfoFloating a {
+    text-decoration: none;
+}
 
 #RoundInfoFloating span {
     font-size: 120%;
