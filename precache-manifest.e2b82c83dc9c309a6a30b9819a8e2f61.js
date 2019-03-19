@@ -8,6 +8,10 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/media/msfsteflogo.528aa37d.svg"
   },
   {
+    "revision": "42a3aad6cde4645265d04c42ec09dc3a",
+    "url": "/FlopOrNot/static/media/flopornotlogo.42a3aad6.png"
+  },
+  {
     "revision": "b39afe4a04caa099a5b91141d4362deb",
     "url": "/FlopOrNot/static/media/ConcertOne-Regular.b39afe4a.ttf"
   },
@@ -16,19 +20,19 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/js/runtime~main.b718d01a.js"
   },
   {
-    "revision": "a973cbc731e942040a90",
-    "url": "/FlopOrNot/static/js/main.7663e38e.chunk.js"
+    "revision": "f4e39f93e46e62a2b098",
+    "url": "/FlopOrNot/static/js/main.2a62b875.chunk.js"
   },
   {
     "revision": "665ab89ba5e3126eddd3",
     "url": "/FlopOrNot/static/js/2.9066be63.chunk.js"
   },
   {
-    "revision": "a973cbc731e942040a90",
-    "url": "/FlopOrNot/static/css/main.e705d755.chunk.css"
+    "revision": "f4e39f93e46e62a2b098",
+    "url": "/FlopOrNot/static/css/main.39ac010f.chunk.css"
   },
   {
-    "revision": "04b9665f1e2502ec8ce8afdd7b41d397",
+    "revision": "7cef5d090ed491ada4550081648f9373",
     "url": "/FlopOrNot/index.html"
   }
 ];

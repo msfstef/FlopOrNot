@@ -1,16 +1,17 @@
 {
-  "main.css": "/FlopOrNot/static/css/main.e705d755.chunk.css",
-  "main.js": "/FlopOrNot/static/js/main.7663e38e.chunk.js",
-  "main.js.map": "/FlopOrNot/static/js/main.7663e38e.chunk.js.map",
+  "main.css": "/FlopOrNot/static/css/main.39ac010f.chunk.css",
+  "main.js": "/FlopOrNot/static/js/main.2a62b875.chunk.js",
+  "main.js.map": "/FlopOrNot/static/js/main.2a62b875.chunk.js.map",
   "runtime~main.js": "/FlopOrNot/static/js/runtime~main.b718d01a.js",
   "runtime~main.js.map": "/FlopOrNot/static/js/runtime~main.b718d01a.js.map",
   "static/js/2.9066be63.chunk.js": "/FlopOrNot/static/js/2.9066be63.chunk.js",
   "static/js/2.9066be63.chunk.js.map": "/FlopOrNot/static/js/2.9066be63.chunk.js.map",
   "index.html": "/FlopOrNot/index.html",
-  "precache-manifest.3728ba4d1a90d3967edb455209a089ce.js": "/FlopOrNot/precache-manifest.3728ba4d1a90d3967edb455209a089ce.js",
+  "precache-manifest.e2b82c83dc9c309a6a30b9819a8e2f61.js": "/FlopOrNot/precache-manifest.e2b82c83dc9c309a6a30b9819a8e2f61.js",
   "service-worker.js": "/FlopOrNot/service-worker.js",
-  "static/css/main.e705d755.chunk.css.map": "/FlopOrNot/static/css/main.e705d755.chunk.css.map",
+  "static/css/main.39ac010f.chunk.css.map": "/FlopOrNot/static/css/main.39ac010f.chunk.css.map",
   "static/media/Header.css": "/FlopOrNot/static/media/ConcertOne-Regular.b39afe4a.ttf",
+  "static/media/flopornotlogo.png": "/FlopOrNot/static/media/flopornotlogo.42a3aad6.png",
   "static/media/msfsteflogo.svg": "/FlopOrNot/static/media/msfsteflogo.528aa37d.svg",
   "static/media/themoviedbdlogosquare.svg": "/FlopOrNot/static/media/themoviedbdlogosquare.281f6d24.svg"
 }
