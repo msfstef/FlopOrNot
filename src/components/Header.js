@@ -10,6 +10,10 @@ class Header extends Component {
         }
     }
 
+    componentDidMount () {
+
+    }
+
     toggleShow = ()=>{
         this.setState({show:!this.state.show})
     }
@@ -26,6 +30,8 @@ class Header extends Component {
                 <About show={this.state.show} toggleShow={this.toggleShow} />
                 <div className="about item" onClick={()=>this.toggleShow()}>
                     About
+                    <div id="controlsReminderTriangle"></div>
+                    <div id="controlsReminder">Check out the controls.</div>
                 </div>
                 <a className="contact item"
                     target="_blank" rel="noopener noreferrer"
