@@ -1,15 +1,15 @@
 {
-  "main.css": "/FlopOrNot/static/css/main.5ce28463.chunk.css",
-  "main.js": "/FlopOrNot/static/js/main.b14031a7.chunk.js",
-  "main.js.map": "/FlopOrNot/static/js/main.b14031a7.chunk.js.map",
+  "main.css": "/FlopOrNot/static/css/main.67b2e80a.chunk.css",
+  "main.js": "/FlopOrNot/static/js/main.4e905b70.chunk.js",
+  "main.js.map": "/FlopOrNot/static/js/main.4e905b70.chunk.js.map",
   "runtime~main.js": "/FlopOrNot/static/js/runtime~main.b718d01a.js",
   "runtime~main.js.map": "/FlopOrNot/static/js/runtime~main.b718d01a.js.map",
   "static/js/2.9066be63.chunk.js": "/FlopOrNot/static/js/2.9066be63.chunk.js",
   "static/js/2.9066be63.chunk.js.map": "/FlopOrNot/static/js/2.9066be63.chunk.js.map",
   "index.html": "/FlopOrNot/index.html",
-  "precache-manifest.5cac0399c266f17b78e5a09acaf73394.js": "/FlopOrNot/precache-manifest.5cac0399c266f17b78e5a09acaf73394.js",
+  "precache-manifest.67d8658fe678e292342e719c6ff94c45.js": "/FlopOrNot/precache-manifest.67d8658fe678e292342e719c6ff94c45.js",
   "service-worker.js": "/FlopOrNot/service-worker.js",
-  "static/css/main.5ce28463.chunk.css.map": "/FlopOrNot/static/css/main.5ce28463.chunk.css.map",
+  "static/css/main.67b2e80a.chunk.css.map": "/FlopOrNot/static/css/main.67b2e80a.chunk.css.map",
   "static/media/msfsteflogo.svg": "/FlopOrNot/static/media/msfsteflogo.528aa37d.svg",
   "static/media/themoviedbdlogosquare.svg": "/FlopOrNot/static/media/themoviedbdlogosquare.281f6d24.svg"
 }

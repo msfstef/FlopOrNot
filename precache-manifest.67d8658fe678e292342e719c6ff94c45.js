@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/js/runtime~main.b718d01a.js"
   },
   {
-    "revision": "53a1f983195435e4a8e8",
-    "url": "/FlopOrNot/static/js/main.b14031a7.chunk.js"
+    "revision": "ac55303d4703715bca27",
+    "url": "/FlopOrNot/static/js/main.4e905b70.chunk.js"
   },
   {
     "revision": "665ab89ba5e3126eddd3",
     "url": "/FlopOrNot/static/js/2.9066be63.chunk.js"
   },
   {
-    "revision": "53a1f983195435e4a8e8",
-    "url": "/FlopOrNot/static/css/main.5ce28463.chunk.css"
+    "revision": "ac55303d4703715bca27",
+    "url": "/FlopOrNot/static/css/main.67b2e80a.chunk.css"
   },
   {
-    "revision": "3678d10ac48396910204266e48798ed5",
+    "revision": "a30a1f18d763b2f1d1c165693d3cecad",
     "url": "/FlopOrNot/index.html"
   }
 ];
