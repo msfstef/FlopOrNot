@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/css/main.67b2e80a.chunk.css"
   },
   {
-    "revision": "a30a1f18d763b2f1d1c165693d3cecad",
+    "revision": "8ec2fdc85c1d096e6b491cb03a573944",
     "url": "/FlopOrNot/index.html"
   }
 ];
