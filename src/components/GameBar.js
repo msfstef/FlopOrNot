@@ -20,6 +20,9 @@ class GameBar extends Component {
     componentDidUpdate(prevProps) {
         if (prevProps.score !== this.props.score) {
             let pointDiff = -(prevProps.score - this.props.score)
+            let breakStreak = (prevProps.streak > this.props.streak) && prevProps.streak > 10
+            let prevStreakNo = Math.floor(prevProps.streak / 10)
+            let streakNo = Math.floor(this.props.streak / 10)
 
             var bubble = document.createElement("div")
             bubble.className = "bubble " + (pointDiff>0?"win":"loss")
@@ -31,12 +34,33 @@ class GameBar extends Component {
             var resultText = document.createTextNode((pointDiff>0?"CORRECT":"WRONG"))
             result.appendChild(resultText)
 
+            var streak = document.createElement("div")
+            streak.className = "streakBubble " + 
+                    (streakNo===1?"one":
+                    (streakNo===2?"two":
+                    (streakNo===3?"three":
+                    (breakStreak?"break":""))))
+            var streakText = document.createTextNode(
+                (streakNo===1?"10 STREAK (x2 points)":
+                (streakNo===2?"20 STREAK (x3 points)":
+                streakNo===3?"30+ STREAK (x4 points)":
+                breakStreak?"STREAK BROKEN - "+prevProps.streak+"":""))
+                )
+            streak.appendChild(streakText)
+
+            if ((streakNo > prevStreakNo && streakNo < 4) || breakStreak) {
+                this.state.resultDiv.appendChild(streak)
+            }
+
             this.state.scoreDiv.appendChild(bubble)
             this.state.resultDiv.appendChild(result)
 
             setTimeout(()=>{
                 this.state.scoreDiv.removeChild(bubble)
                 this.state.resultDiv.removeChild(result)
+                if ((streakNo > prevStreakNo && streakNo < 4) || breakStreak) {
+                    this.state.resultDiv.removeChild(streak)
+                }
             }, 1000)
         }
     }

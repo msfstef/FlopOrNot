@@ -19,6 +19,7 @@ class GameContainer extends Component {
             lossPoints: 20,
             castPoints: 3,
             plotPoints: 2,
+            streak: 0,
 
             cast: false,
             plot: false,
@@ -137,8 +138,11 @@ class GameContainer extends Component {
     handleWin = () => {
         this.setState({
             win: true,
-            score: this.state.score + this.state.currentWinPoints,
+            score: this.state.score + 
+                this.state.currentWinPoints*
+                Math.min((Math.floor(this.state.streak/10)+1), 4),
             currentWinPoints: this.state.winPoints,
+            streak: this.state.streak + 1,
 
             cast: false,
             plot: false,
@@ -150,6 +154,8 @@ class GameContainer extends Component {
         this.setState({
             win: false,
             score: this.state.score - this.state.lossPoints,
+            currentWinPoints: this.state.winPoints,
+            streak: 0,
 
             cast: false,
             plot: false,
@@ -184,7 +190,19 @@ class GameContainer extends Component {
         }
     }
 
-    showCast = () => {
+    shareTwitter = () => {
+        let text = 'I reached a score of ' + this.state.score + ' on Flop or Not!'
+        text += ' Can you beat me?'
+        window.open('http://twitter.com/share?url=https://msfstef.dev/FlopOrNot/&text='+text, 
+                    'tshare', 'height=400,width=550,resizable=1,toolbar=0,menubar=0,status=0,location=0');  
+    }
+
+    shareFacebook = () => {
+        window.open('http://facebook.com/sharer.php?s=100&p[url]=https://msfstef.dev/FlopOrNot/', 
+                'fbshare', 'height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0');
+    }
+
+    showCast = () => {          
         this.setState({
             cast:true,
             currentWinPoints: 
@@ -258,6 +276,12 @@ class GameContainer extends Component {
                     <Plot plot={this.props.movie.plot} />
                 </div>
 
+                <div class="fa fa-twitter socialShare" id="TwitterShare"
+                    onClick={()=>this.shareTwitter()}></div>
+                
+                <div class="fa fa-facebook socialShare" id="FacebookShare"
+                    onClick={()=>this.shareFacebook()}></div>
+
                 <GameBar
                     title={this.state.prevMovie.title}
                     firstGame={this.state.firstGame}
@@ -265,6 +289,7 @@ class GameContainer extends Component {
                     isFlop={this.state.wasFlop}
                     win={this.state.win}
                     score={this.state.score}
+                    streak={this.state.streak}
                     revenue={this.state.prevMovie.revenue}
                     budget={this.state.prevMovie.budget} />
             </div>
