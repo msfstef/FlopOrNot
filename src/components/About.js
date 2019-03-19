@@ -46,9 +46,13 @@ class About extends Component {
                     The web app was made in March of 2019 using React and The Movie DB's API which they kindly provide at no cost with excellent documentation.
                     </p>
                     <div className="logoContainer">
-                        <img className="logo themoviedb"
+                        <a className="logo themoviedb"
+                            target="_blank" rel="noopener noreferrer"
+                            href="https://www.themoviedb.org/">
+                        <img id="theMovieDbLogo"
                             alt="the movie db logo"
                             src={moviedblogo} />
+                        </a>
                         <div className="logo msfstef">
                         <Stamp />
                         </div>

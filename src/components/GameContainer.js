@@ -127,7 +127,7 @@ class GameContainer extends Component {
                     style={{pointerEvents: this.props.loading?"none":"auto"}} 
                     className="button right"
                     onClick={()=>this.userPick(false)}>
-                    <span>Not</span>
+                    <span>Success</span>
                 </div>
                 
                 <div id="posterContainer">

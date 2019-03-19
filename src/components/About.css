@@ -23,7 +23,10 @@
     padding: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: white;
+    background: linear-gradient(rgb(236, 202, 236) 0%, 
+                                rgb(255, 236, 255) 5%, 
+                                rgb(233, 210, 233) 95%, 
+                                rgb(223, 185, 223) 100%);
 
     border-top-left-radius: 50px;
 
@@ -37,6 +40,8 @@
     font-size: 30px;
     font-family: arial;
     font-weight: bold;
+    user-select: none;
+    cursor: pointer;
 }
 
 
@@ -53,6 +58,10 @@
     max-height: 100px;
     margin-top: 50px;
     margin-bottom: 30px;
+}
+
+#theMovieDbLogo {
+    height: 100px;
 }
 
 @media only screen and (max-width: 1100px) {

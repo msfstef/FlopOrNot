@@ -16,7 +16,9 @@
     padding-left: 2%;
     padding-right: 2%;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to left, rgb(150, 141, 156), rgb(211, 198, 214));
+    background-image: linear-gradient(to left, 
+                                    rgb(164, 98, 190), 
+                                    rgb(172, 97, 172));
 }
 
 #Header .logoHeader {
@@ -44,8 +46,8 @@
     padding-left: 8px;
     padding-right: 8px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.63);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
     transition: transform 0.1s, text-shadow 0.1s;
 }
 
@@ -62,15 +64,9 @@
 
 }
 
-#Header .item.contact {
-    display:none;
-}
+
 
 @media screen and (min-width: 900px) {
-    #Header .item.contact {
-        display:unset;
-    }
-
     #Header .item {
         font-size: 1.1em;
     }
