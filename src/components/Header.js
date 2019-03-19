@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import About from './About';
+import flopornotlogo from '../assets/flopornotlogo.svg'
 import './Header.css'
 
 class Header extends Component {
@@ -21,10 +22,12 @@ class Header extends Component {
     render() {
         return (
             <div id="Header">
-                <div>Flop or Not</div>
-                {/*<img className="logo" 
-                    src={require("../assets/logo.png")}
-                    alt="logo" /> */}
+                <div className="inHeader">
+                    <img className="logo" 
+                        src={flopornotlogo}
+                        alt="logo" />
+                    <div>FLOP OR NOT</div>
+                </div>
                 
                 <div className="itemContainer">
                 <About show={this.state.show} toggleShow={this.toggleShow} />
