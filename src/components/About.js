@@ -16,7 +16,16 @@ class About extends Component {
                     <h2>How to play</h2>
                     <p>
                         The game is simple: you're shown a movie poster, and you have to guess whether the movie was a box office failure (flop).
-                        <br/><br/>
+                    </p>
+                    <p>
+                        Commands:
+                    </p>
+                    <ul>
+                        <li>Flop: use the button, F or left arrow key on the keyboard, or swipe left.</li>
+                        <li>Not Flop: use the button, H or right arrow key on the keyboard, or swipe right. </li>
+                        <li>Reveal Hints: use the buttons, or press spacebar on the keyboard.</li>
+                    </ul>
+                    <p>
                         Although it is hard to exactly define what makes a movie a flop, for the sake of this game, if the budget exceeds the US gross revenue, it is a flop. 
                         You can use additional help by revealing the cast and plot of the movie, at the cost of points earned if you win the round.
                     </p>

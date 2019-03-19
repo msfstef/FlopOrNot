@@ -7,13 +7,16 @@ class Poster extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            imageLoaded: false
+            imageLoaded: false,
         }
     }
 
     componentDidUpdate (prevProps) {
         if (this.props.poster_src !== prevProps.poster_src) {
-            this.setState({imageLoaded:false})
+            this.setState({
+                imageLoaded:false,
+            })
+
             let img = new Image();
             img.src = this.props.poster_src
             img.onload = ()=>{

@@ -42,6 +42,10 @@ class GameBar extends Component {
     }
 
     formatInfo = () => {
+        if (this.props.firstGame) {
+            return <div>Is this a flop, or not?</div>
+        }
+
         if (this.props.isFlop) {
             return (
                 <div>
@@ -65,19 +69,31 @@ class GameBar extends Component {
 
 
     formatDollars = (value) => {
+        if(this.props.firstGame) {
+            return <span>N/A</span>
+        }
+
         if (value/1000000 >= 1) {
             let valRound = Math.round(value/1000000)
-            return "$" + valRound + "M"
+            return <span>{"$" + valRound + "M"}</span>
         } else {
             let valRound = Math.round(value/1000)
-            return "$" + valRound + "K"
+            return <span>{"$" + valRound + "K"}</span>
         }
     }
 
     render() {
         return (
-            <div id="GameBar" className={this.props.win?"win":"loss"}>
+            <div id="GameBar" 
+                className={
+                    (this.props.firstGame?"firstGame ":"") +
+                    (this.props.win?"win":"loss")}>
                 <div id="Score" className="barItem">
+                    <div className="title">Score</div>
+                    <div className="text">{this.props.score}</div>
+                </div>
+
+                <div id="ScoreFloating">
                     <div className="title">Score</div>
                     <div className="text">{this.props.score}</div>
                 </div>
@@ -87,9 +103,13 @@ class GameBar extends Component {
                 </div>
 
                 <div id="RoundInfo" className="barItem">
-                    
-                    <div>Bgt.: {this.formatDollars(this.props.budget)}</div>
-                    <div>Rev.: {this.formatDollars(this.props.revenue)}</div>
+                    <div>Bgt: {this.formatDollars(this.props.budget)}</div>
+                    <div>Rev: {this.formatDollars(this.props.revenue)}</div>
+                </div>
+
+                <div id="RoundInfoFloating">
+                    <div>Bgt: {this.formatDollars(this.props.budget)}</div>
+                    <div>Rev: {this.formatDollars(this.props.revenue)}</div>
                 </div>
             </div>
         );

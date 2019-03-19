@@ -71,6 +71,14 @@ class MovieGetter extends Component {
 
     getData = async () => {
         this.setState({loading:true})
+        const BUFFER_TIME = 600 // loading buffer in ms
+        let loading = true;
+        let loadingBuffer = true;
+        setTimeout(()=>{
+            loadingBuffer = false
+            this.setState({loading: loading || loadingBuffer})
+        }, BUFFER_TIME)
+
         let movie = await this.getValidMovie()
         var data = {
             title: movie.title,
@@ -81,10 +89,13 @@ class MovieGetter extends Component {
             revenue: movie.revenue,
             imdb_id: movie.imdb_id,
         }
+
+        loading = false;
         this.setState({
             movie:data,
-            loading: false
+            loading: loading || loadingBuffer,
         })
+
     }
 
 

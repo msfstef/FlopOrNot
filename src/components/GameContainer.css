@@ -11,6 +11,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+@keyframes posterRight {
+    0%   {transform: translateX(0vw); opacity: 1;}
+    45%  {transform: translateX(100vw); opacity: 1;}
+    50%  {transform: translateX(100vw); opacity: 0;}
+    55%  {transform: translateX(-100vw); opacity: 0;}
+    100%  {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes posterLeft {
+    0%   {transform: translateX(0vw); opacity: 1;}
+    45%  {transform: translateX(-100vw); opacity: 1;}
+    50%  {transform: translateX(-100vw); opacity: 0;}
+    55%  {transform: translateX(100vw); opacity: 0;}
+    100%  {transform: translateX(0); opacity: 1;}
 }
 
 #posterContainer {
@@ -67,7 +84,9 @@
 }
 
 .hintButton span {
-    transform: translateY(-0.05vmax)
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    font-size: 110%;
 }
 
 .hintButton.show:hover {
@@ -101,10 +120,10 @@
     align-items: center;
     user-select: none;
     position: fixed;
-    top: 50%;
-    width: 10vmax;
-    height: 10vmax;
-    font-size: 2vmax;
+    top: calc(50% - 2.5vmax);
+    width: 11vmax;
+    height: 11vmax;
+    font-size: 2.6vmax;
     border-radius: 50%;
     background-color: white;
     
@@ -117,15 +136,15 @@
 }
 
 .button span {
-    transform: translateY(-0.2vmax)
+    font-family: "Calibri";
 }
 
 .button.right {
-    background-color: rgba(0, 255, 64, 0.5);
+    background-color: rgba(255, 251, 0, 0.5);
     right: 5vw;
 }
 
 .button.left {
-    background-color: rgba(255, 94, 0, 0.5);
+    background-color: rgba(255, 251, 0, 0.5);
     left: 5vw;
 }

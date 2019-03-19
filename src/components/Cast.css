@@ -39,8 +39,10 @@
 .castText {
     max-width: 100%;
     text-align: center;
-    font-size: 1.1vmax;
+    font-size: 105% !important;
     box-sizing: border-box;
+
+    font-family: 'Calibri';
 }
 
 .castText div {
