@@ -13,7 +13,10 @@ class MovieGetter extends Component {
         this.state = {
             noOfPages: 1,
             movie: {},
+            movieBuffer: [],
+            bufferSize: 3,
             loading: true,
+            internet: true,
         }
     }
 
@@ -31,6 +34,13 @@ class MovieGetter extends Component {
             .then ( (json) => {
                 return json.total_pages
             })
+            .catch( (e) => {
+                console.log("No response - possibly no internet.")
+                console.log(e)
+                setTimeout(()=>{
+                    this.setState({internet: false})
+                }, 2000)
+            })
     }
 
     getRandId = () => {
@@ -42,6 +52,14 @@ class MovieGetter extends Component {
             .then ( (json) => {
                 let result = Math.floor(Math.random() * json.results.length)
                 return json.results[result].id
+            })
+            .catch( (e) => {
+                console.log("No response - possibly no internet.")
+                console.log(e)
+                setTimeout(()=>{
+                    this.setState({internet: false})
+                }, 2000)
+                
             })
     }
 
@@ -57,6 +75,9 @@ class MovieGetter extends Component {
                     return false
                 }
             })
+            .catch( (e) => {
+                console.log(e)
+            })
     }
 
     getValidMovie = async () => {
@@ -69,17 +90,7 @@ class MovieGetter extends Component {
         }
     }
 
-    getData = async () => {
-        this.setState({loading:true})
-        const BUFFER_TIME = 600 // loading buffer in ms
-        let loading = true;
-        let loadingBuffer = true;
-        setTimeout(()=>{
-            loadingBuffer = false
-            this.setState({loading: loading || loadingBuffer})
-        }, BUFFER_TIME)
-
-        let movie = await this.getValidMovie()
+    dataFromMovie = (movie) => {
         var data = {
             title: movie.title,
             plot: movie.overview,
@@ -89,15 +100,49 @@ class MovieGetter extends Component {
             revenue: movie.revenue,
             imdb_id: movie.imdb_id,
         }
+        return data
+    }
+
+    fillBuffer = async () => {
+        var len = this.state.movieBuffer.length;
+        for (let i = 0; i < this.state.bufferSize - len; i++) {
+            let movieRaw = await this.getValidMovie()
+            let movie = this.dataFromMovie(movieRaw)
+            this.state.movieBuffer.push(movie)
+        }
+    }
+
+    getData = async () => {
+        this.setState({
+            loading:true,
+            internet:true
+        })
+        const BUFFER_TIME = 500 // loading buffer in ms
+        let loading = true;
+        let loadingBuffer = true;
+        setTimeout(()=>{
+            loadingBuffer = false
+            this.setState({loading: loading || loadingBuffer})
+        }, BUFFER_TIME)
+        
+        let movie = {}
+        if (this.state.movieBuffer.length > 0) {
+                movie = this.state.movieBuffer.pop()
+        } else {
+            let movieRaw = await this.getValidMovie()
+            movie = this.dataFromMovie(movieRaw)
+        }
 
         loading = false;
         this.setState({
-            movie:data,
+            movie:movie,
+            prevMovieTitle: movie.title,
             loading: loading || loadingBuffer,
+        }, async () => {
+            this.fillBuffer()
         })
 
     }
-
 
     
     render() {
