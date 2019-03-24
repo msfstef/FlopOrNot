@@ -8,8 +8,8 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/media/msfsteflogo.528aa37d.svg"
   },
   {
-    "revision": "42a3aad6cde4645265d04c42ec09dc3a",
-    "url": "/FlopOrNot/static/media/flopornotlogo.42a3aad6.png"
+    "revision": "c6ad7e72bab6b5d07491e6125c8d5bd2",
+    "url": "/FlopOrNot/static/media/flopornotlogo.c6ad7e72.png"
   },
   {
     "revision": "b39afe4a04caa099a5b91141d4362deb",
@@ -20,19 +20,19 @@ self.__precacheManifest = [
     "url": "/FlopOrNot/static/js/runtime~main.b718d01a.js"
   },
   {
-    "revision": "f4e39f93e46e62a2b098",
-    "url": "/FlopOrNot/static/js/main.2a62b875.chunk.js"
+    "revision": "bb2db7449343c03ef02b",
+    "url": "/FlopOrNot/static/js/main.235f694c.chunk.js"
   },
   {
     "revision": "665ab89ba5e3126eddd3",
     "url": "/FlopOrNot/static/js/2.9066be63.chunk.js"
   },
   {
-    "revision": "f4e39f93e46e62a2b098",
-    "url": "/FlopOrNot/static/css/main.39ac010f.chunk.css"
+    "revision": "bb2db7449343c03ef02b",
+    "url": "/FlopOrNot/static/css/main.b484f549.chunk.css"
   },
   {
-    "revision": "7cef5d090ed491ada4550081648f9373",
+    "revision": "a4934dd4bcc411564f83b123f8bd41bc",
     "url": "/FlopOrNot/index.html"
   }
 ];
