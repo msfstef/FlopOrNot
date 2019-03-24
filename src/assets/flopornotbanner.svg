@@ -37,7 +37,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="562.3952"
+     inkscape:cx="330.25234"
      inkscape:cy="397.85516"
      inkscape:document-units="mm"
      inkscape:current-layer="g5431"
@@ -80,25 +80,26 @@
          style="opacity:1;fill:#72197a;fill-opacity:1;stroke:none;stroke-width:1.62608051;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
          transform="skewX(0.00370319)" />
       <g
-         style="fill:#c4bc28;fill-opacity:1"
+         style="fill:#e9e216;fill-opacity:1"
          id="g5307-5"
          transform="matrix(0.75118944,0,0,0.75118944,42.016817,-66.388566)">
         <g
            id="g4513"
-           transform="matrix(2.2222222,0,0,2.2222222,8.1285683,-238.71757)">
+           transform="matrix(2.2222222,0,0,2.2222222,8.1285683,-238.71757)"
+           style="fill:#e9e216;fill-opacity:1">
           <g
              transform="translate(-58.924346,-0.27519584)"
              id="g5293-9"
-             style="fill:#c4bc28;fill-opacity:1">
+             style="fill:#e9e216;fill-opacity:1">
             <g
                id="g5291-3"
-               style="fill:#c4bc28;fill-opacity:1">
+               style="fill:#e9e216;fill-opacity:1">
               <g
                  id="g5285-2"
                  transform="translate(-12.542489,98.108433)"
-                 style="fill:#c4bc28;fill-opacity:1">
+                 style="fill:#e9e216;fill-opacity:1">
                 <rect
-                   style="opacity:1;fill:#c4bc28;fill-opacity:1;stroke:none;stroke-width:0.4259043;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
+                   style="opacity:1;fill:#e9e216;fill-opacity:1;stroke:none;stroke-width:0.4259043;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
                    id="rect5281-9"
                    width="37.986607"
                    height="24.623131"
@@ -108,7 +109,7 @@
                    ry="0.8504464" />
                 <path
                    sodipodi:type="star"
-                   style="opacity:1;fill:#c4bc28;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
+                   style="opacity:1;fill:#e9e216;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
                    id="path5283-7"
                    sodipodi:sides="3"
                    sodipodi:cx="113.01489"
@@ -127,7 +128,7 @@
               </g>
               <text
                  xml:space="preserve"
-                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.29992676px;line-height:1.25;font-family:'Rockwell Condensed';-inkscape-font-specification:'Rockwell Condensed, ';letter-spacing:0px;word-spacing:0px;fill:#c4bc28;fill-opacity:1;stroke:none;stroke-width:1.88365197"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65.29992676px;line-height:1.25;font-family:'Rockwell Condensed';-inkscape-font-specification:'Rockwell Condensed, ';letter-spacing:0px;word-spacing:0px;fill:#e9e216;fill-opacity:1;stroke:none;stroke-width:1.88365197"
                  x="-154.64636"
                  y="110.76985"
                  id="text5289-1"
@@ -136,26 +137,26 @@
                    id="tspan5287-2"
                    x="-154.64636"
                    y="110.76985"
-                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Rockwell Condensed';-inkscape-font-specification:'Rockwell Condensed, ';fill:#c4bc28;fill-opacity:1;stroke-width:1.88365197">$</tspan></text>
+                   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Rockwell Condensed';-inkscape-font-specification:'Rockwell Condensed, ';fill:#e9e216;fill-opacity:1;stroke-width:1.88365197">$</tspan></text>
             </g>
           </g>
           <g
              id="g5305-9"
              transform="translate(-1.4935505,-3.1692458)"
-             style="fill:#c4bc28;fill-opacity:1">
+             style="fill:#e9e216;fill-opacity:1">
             <g
                id="g5303-4"
                transform="translate(0,-0.76938335)"
-               style="fill:#c4bc28;fill-opacity:1">
+               style="fill:#e9e216;fill-opacity:1">
               <g
                  transform="translate(0,2.1275069)"
                  id="g5301-8"
-                 style="fill:#c4bc28;fill-opacity:1">
+                 style="fill:#e9e216;fill-opacity:1">
                 <g
                    id="g5299-6"
-                   style="fill:#c4bc28;fill-opacity:1">
+                   style="fill:#e9e216;fill-opacity:1">
                   <rect
-                     style="opacity:1;fill:#c4bc28;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
+                     style="opacity:1;fill:#e9e216;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal"
                      id="rect5295-2"
                      width="5.612658"
                      height="25.123343"
@@ -173,7 +174,7 @@
                      height="25.123343"
                      width="5.612658"
                      id="rect5297-7"
-                     style="opacity:1;fill:#c4bc28;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal" />
+                     style="opacity:1;fill:#e9e216;fill-opacity:1;stroke:none;stroke-width:0.52899998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98994978;paint-order:normal" />
                 </g>
               </g>
             </g>

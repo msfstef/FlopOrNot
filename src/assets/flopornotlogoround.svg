@@ -15,10 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="flopornotlogo.svg"
-   inkscape:export-filename="E:\Libraries\Documents\GitHubRepositories\FlopOrNot\src\assets\flopornotlogo.png"
-   inkscape:export-xdpi="173.7697"
-   inkscape:export-ydpi="173.7697">
+   sodipodi:docname="flopornotlogoround.svg"
+   inkscape:export-filename="E:\Libraries\Documents\GitHubRepositories\FlopOrNot\src\assets\flopornotlogoround.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -61,8 +61,8 @@
        id="g5431"
        transform="translate(37.549344,-4.0413033)">
       <rect
-         rx="5.4211321"
-         ry="5.4211321"
+         rx="37.419643"
+         ry="37.419643"
          y="26.369047"
          x="10.583333"
          height="74.839287"
@@ -74,7 +74,7 @@
       <g
          style="fill:#e9e216;fill-opacity:1"
          id="g5307-5"
-         transform="translate(20.206946,-94.106046)"
+         transform="matrix(0.79251449,0,0,0.79251449,25.97422,-61.345176)"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96">
         <g
