@@ -107,7 +107,8 @@ class MovieGetter extends Component {
         var len = this.state.movieBuffer.length;
         for (let i = 0; i < this.state.bufferSize - len; i++) {
             let movieRaw = await this.getValidMovie()
-            let movie = this.dataFromMovie(movieRaw)
+            let movie = this.dataFromMovie(movieRaw);
+            (new Image()).src = movie.poster_src;
             this.state.movieBuffer.push(movie)
         }
     }
@@ -117,7 +118,7 @@ class MovieGetter extends Component {
             loading:true,
             internet:true
         })
-        const BUFFER_TIME = 500 // loading buffer in ms
+        const BUFFER_TIME = 700 // loading buffer in ms
         let loading = true;
         let loadingBuffer = true;
         setTimeout(()=>{

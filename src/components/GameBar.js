@@ -44,7 +44,7 @@ class GameBar extends Component {
                 (streakNo===1?"10 STREAK (x2 points)":
                 (streakNo===2?"20 STREAK (x3 points)":
                 streakNo===3?"30+ STREAK (x4 points)":
-                breakStreak?"STREAK BROKEN - "+prevProps.streak+"":""))
+                breakStreak?"STREAK BROKEN ["+prevProps.streak+"]":""))
                 )
             streak.appendChild(streakText)
 
