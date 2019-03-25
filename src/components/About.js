@@ -39,6 +39,7 @@ class About extends Component {
                         Keep in mind that most movies are not flops, so play conservatively.
                         <br/><br/>
                         The game is also available on Android from the Google Play store!
+                        <br/>
                         <a href='https://play.google.com/store/apps/details?id=com.flopornot&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
                             <img alt='Get it on Google Play' id="aboutPlayBadge"
                             src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
