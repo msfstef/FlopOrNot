@@ -114,6 +114,7 @@
 }
 
 #controlsReminderTriangle {
+    pointer-events: none;
     position: absolute;
     top: 40px;
     right: calc(50% - 11px);
@@ -131,6 +132,7 @@
 }
 
 #controlsReminder {
+    pointer-events: none;
     position: absolute;
     text-align: center;
     top: 50px;

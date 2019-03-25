@@ -20,9 +20,12 @@ class GameContainer extends Component {
             castPoints: 3,
             plotPoints: 2,
             streak: 0,
+            noOfRounds: 0,
 
             cast: false,
             plot: false,
+
+            mobileApp: false,
         }
     }
 
@@ -165,6 +168,7 @@ class GameContainer extends Component {
 
     userPick = (flop, touch=true) => {
         if (this.props.loading) { return ; }
+        if (this.state.noOfRounds === 3) { this.setState({mobileApp: true})}
         const poster = document.getElementById("Poster")
         if (flop && touch) {
             poster.style.animation = "posterLeft 1s"
@@ -179,6 +183,7 @@ class GameContainer extends Component {
             wasFlop:isFlop,
             prevMovie: this.props.movie,
             firstGame: false,
+            noOfRounds: this.state.noOfRounds + 1,
         })
 
         window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -276,11 +281,24 @@ class GameContainer extends Component {
                     <Plot plot={this.props.movie.plot} />
                 </div>
 
-                <div class="fa fa-twitter socialShare" id="TwitterShare"
+                <div className="fa fa-twitter socialShare" id="TwitterShare"
                     onClick={()=>this.shareTwitter()}></div>
                 
-                <div class="fa fa-facebook socialShare" id="FacebookShare"
+                <div className="fa fa-facebook socialShare" id="FacebookShare"
                     onClick={()=>this.shareFacebook()}></div>
+
+                <div className={"mobileApp " + (this.state.mobileApp?"show":"hide")}>
+                    <div id="mobileAppClose"
+                        onClick={()=>this.setState({mobileApp: false})}>
+                    X
+                    </div>
+                    <div>
+                        Download the mobile app!
+                    </div>
+                    <a id="mainPlayBadge" href='https://play.google.com/store/apps/details?id=com.flopornot&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+                    </a>
+                </div>
 
                 <GameBar
                     title={this.state.prevMovie.title}

@@ -191,3 +191,53 @@
     background-color: #00aced;
     color: white;
 }
+
+.mobileApp {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .mobileApp {
+        display: block;
+        position: fixed;
+        width: 50%;
+        left: 10px;
+        top: 75px;
+        opacity: 1;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 10px;
+        padding-top: 15px;
+        padding-bottom: 0;
+
+        text-align: center;
+        font-family: 'concert one';
+        font-size: 6vw;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mobileApp.hide {
+        pointer-events: none;
+        opacity: 0;
+        
+    }
+
+    #mobileAppClose {
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        left: calc(10px + 10px + 25vw - 18px);
+        top: calc(75px - 18px);
+        font-family: 'concert one';
+        font-size: 30px;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+    }
+
+    .mobileApp img {
+        max-width: 100%;
+        margin: -5px;
+    }
+}
